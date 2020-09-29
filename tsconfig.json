@@ -1,0 +1,15 @@
+{
+    "extends": "./node_modules/@salesforce/dev-config/tsconfig.json",
+    "compilerOptions": {
+        "allowJs": false,
+        "lib": ["dom", "esNext"],
+        "outDir": "./lib",
+        "rootDirs": ["./src"],
+        "paths": {
+            "*": ["./node_modules/@salesforce/core/typings/*"]
+        },
+        "types": ["node", "jest", "fs-extra", "moment", "request", "request-promise-native", "js2xmlparser", "@types/jsforce/describe-result"],
+        "target": "ES6"
+    },
+    "exclude": ["./test/**", "./testProject*/**/*", "./test/**/*", "./mshanemc-*/**/*"]
+}

@@ -10,13 +10,14 @@
         "lib"
     ],
     "scripts": {
-        "build": "rimraf ./dist && tsc -p tsconfig.build.json",
+        "build": "rimraf ./dist && tsc",
         "test": "echo \"Error: run tests from root\" && exit 1"
     },
     "devDependencies": {
         "rimraf": "^3.0.2"
     },
     "dependencies": {
+        "@salesforce/dev-config": "^2.0.0",
         "fs-extra": "^9.0.1",
         "strip-color": "^0.1.0",
         "xml2js": "^0.4.23"
