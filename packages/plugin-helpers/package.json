@@ -1,0 +1,19 @@
+{
+  "name": "@mshanemc/plugin-helpers",
+  "version": "1.0.0",
+  "description": "shared libraries for sfdx plugins",
+  "author": "mshanemc <shane.mclaughlin@salesforce.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/plugin-helpers.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  }
+}
