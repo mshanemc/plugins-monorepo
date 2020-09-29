@@ -1,19 +1,24 @@
 {
-  "name": "@mshanemc/plugin-helpers",
-  "version": "1.0.0",
-  "description": "shared libraries for sfdx plugins",
-  "author": "mshanemc <shane.mclaughlin@salesforce.com>",
-  "homepage": "",
-  "license": "ISC",
-  "main": "lib/plugin-helpers.js",
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
-  },
-  "files": [
-    "lib"
-  ],
-  "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
-  }
+    "name": "@mshanemc/plugin-helpers",
+    "version": "1.0.0",
+    "description": "shared libraries for sfdx plugins",
+    "author": "mshanemc <shane.mclaughlin@salesforce.com>",
+    "homepage": "",
+    "license": "ISC",
+    "main": "lib/plugin-helpers.js",
+    "files": [
+        "lib"
+    ],
+    "scripts": {
+        "build": "rimraf ./dist && tsc -p tsconfig.build.json",
+        "test": "echo \"Error: run tests from root\" && exit 1"
+    },
+    "devDependencies": {
+        "rimraf": "^3.0.2"
+    },
+    "dependencies": {
+        "fs-extra": "^9.0.1",
+        "strip-color": "^0.1.0",
+        "xml2js": "^0.4.23"
+    }
 }
