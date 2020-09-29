@@ -3,6 +3,8 @@
     "include": ["./src"],
     "compilerOptions": {
         "outDir": "./dist",
-        "baseUrl": "./"
-    }
+        "baseUrl": "./",
+        "module": "ES2020"
+    },
+    "declaration": true
 }

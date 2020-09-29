@@ -3,7 +3,6 @@
     "compilerOptions": {
         "allowJs": false,
         "lib": ["dom", "esNext"],
-        "outDir": "./lib",
         "rootDirs": ["./src"],
         "paths": {
             "*": ["./node_modules/@salesforce/core/typings/*"]

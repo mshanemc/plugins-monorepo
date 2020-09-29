@@ -5,9 +5,10 @@
     "author": "mshanemc <shane.mclaughlin@salesforce.com>",
     "homepage": "",
     "license": "ISC",
-    "main": "lib/plugin-helpers.js",
+    "main": "./dist/index.js",
+    "module": "./dist/index.js",
     "files": [
-        "lib"
+        "dist"
     ],
     "scripts": {
         "build": "rimraf ./dist && tsc",

@@ -17,6 +17,7 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
+    "@mshanemc/plugin-helpers": "^1.0.0",
     "@salesforce/dev-config": "^2.0.0"
   }
 }
