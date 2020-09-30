@@ -2,16 +2,16 @@
     "extends": "../../tsconfig.json",
     "compilerOptions": {
         "allowJs": false,
-        "lib": ["dom", "esNext", "ES2019.Array"],
-        "outDir": "./lib",
-        "rootDirs": ["./src"],
         "baseUrl": "./",
+        "lib": ["dom", "esNext", "ES2019.Array"],
+        "module": "ES2020",
+        "outDir": "./lib",
         "paths": {
             "*": ["./node_modules/@salesforce/core/typings/*"]
         },
-        "types": ["node", "jest", "fs-extra", "moment", "request", "request-promise-native", "js2xmlparser", "@types/jsforce/describe-result"],
+        "rootDirs": ["./src"],
         "target": "ES2020",
-        "module": "es2020"
+        "types": ["node", "jest", "fs-extra", "moment", "request", "request-promise-native", "js2xmlparser", "@types/jsforce/describe-result"]
     },
     "include": ["./src/**/*", "test/unit/herokuCredentialParsing.test.ts"],
     "exclude": ["./test/**", "./testProject*/**/*", "./test/**/*", "./mshanemc-*/**/*"]

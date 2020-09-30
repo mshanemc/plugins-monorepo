@@ -1,5 +1,5 @@
 {
-    "extends": "../../tsconfig.json",
+    // "extends": "../../tsconfig.json",
     "compilerOptions": {
         "allowJs": false,
         "lib": ["dom", "esNext", "ES2019.Array"],
@@ -11,7 +11,8 @@
             "*": ["./node_modules/@salesforce/core/typings/*"]
         },
         "types": ["node", "jest", "fs-extra", "request", "request-promise-native", "js2xmlparser", "@types/jsforce/describe-result"],
-        "target": "ES2020"
+        "target": "ES2020",
+        "module": "es2020"
     },
     "include": ["./src/**/*"],
     "exclude": ["./test/**", "./testProject*/**/*", "./test/**/*", "./mshanemc-*/**/*"]

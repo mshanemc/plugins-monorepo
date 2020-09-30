@@ -104,18 +104,18 @@
     },
     "repository": "mshanemc/shane-sfdx-plugins",
     "scripts": {
-        "build": "rimraf lib && tsc",
+        "build": "rimraf lib && tsc -p tsconfig.json",
         "clean": "rimraf .oclif.manifest.json",
-        "postpublish": "yarn run clean; git push; git push --tags",
+        "postpublish": "yarn clean; git push; git push --tags",
         "posttest": "",
-        "prepare": "yarn run build && oclif-dev manifest && yarn test:clean",
-        "prepublishOnly": "yarn run build && oclif-dev manifest",
-        "preversion": "yarn run clean",
-        "test": "yarn run prepare && jest --runInBand",
+        "prepare": "yarn build && oclif-dev manifest && yarn test:clean",
+        "prepublishOnly": "yarn build && oclif-dev manifest",
+        "preversion": "yarn clean",
+        "test": "yarn prepare && jest --runInBand",
         "test:clean": "rimraf testProject*",
-        "test:local": "LOCALONLY='true' yarn run prepare && jest --runInBand",
-        "test:parallel": "yarn run prepare && jest",
-        "test:watch": "yarn run prepare && jest --watch --runInBand",
+        "test:local": "LOCALONLY='true' yarn prepare && jest --runInBand",
+        "test:parallel": "yarn prepare && jest",
+        "test:watch": "yarn prepare && jest --watch --runInBand",
         "version": "oclif-dev readme && git add README.md",
         "prettier": "prettier --write src/**/**/*.ts && prettier --write src/**/*.ts && prettier --write src/*.ts && prettier --write test/**/*.ts && prettier --write test/**/**/*.ts"
     },
@@ -129,5 +129,8 @@
             "prettier --write",
             "git add"
         ]
+    },
+    "devDependencies": {
+        "rimraf": "^3.0.2"
     }
 }

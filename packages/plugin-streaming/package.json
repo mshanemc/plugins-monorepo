@@ -1,10 +1,11 @@
 {
-    "name": "plugin-streaming",
-    "version": "1.0.0",
-    "description": "> TODO: description",
     "author": "mshanemc <shane.mclaughlin@salesforce.com>",
-    "homepage": "",
-    "license": "ISC",
+    "dependencies": {
+        "@mshanemc/plugin-helpers": "^1.0.0",
+        "@salesforce/command": "^3.0.3",
+        "@salesforce/dev-config": "^2.0.0"
+    },
+    "description": "> TODO: description",
     "directories": {
         "lib": "lib",
         "test": "__tests__"
@@ -14,9 +15,23 @@
         "/lib",
         "/messages"
     ],
+    "homepage": "",
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "license": "ISC",
+    "lint-staged": {
+        "*.{ts,js,css,json,md}": [
+            "prettier --write",
+            "git add"
+        ]
+    },
+    "name": "plugin-streaming",
     "oclif": {
-        "commands": "./lib/commands",
         "bin": "sfdx",
+        "commands": "./lib/commands",
         "devPlugins": [
             "@oclif/plugin-help"
         ]
@@ -24,23 +39,12 @@
     "scripts": {
         "build": "rimraf lib && tsc",
         "clean": "rimraf .oclif.manifest.json",
-        "prepare": "yarn run build && oclif-dev manifest && yarn test:clean",
+        "prepare": "yarn build && oclif-dev manifest && yarn test:clean",
         "test": "echo \"Error: run tests from root\" && exit 1"
     },
-    "dependencies": {
-        "@mshanemc/plugin-helpers": "^1.0.0",
-        "@salesforce/command": "^3.0.3",
-        "@salesforce/dev-config": "^2.0.0"
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged"
-        }
-    },
-    "lint-staged": {
-        "*.{ts,js,css,json,md}": [
-            "prettier --write",
-            "git add"
-        ]
+    "type": "module",
+    "version": "1.0.0",
+    "devDependencies": {
+        "rimraf": "^3.0.2"
     }
 }
