@@ -1,8 +1,7 @@
-import { exec } from '../../src/shared/execProm';
+import * as fs from 'fs-extra';
+import { exec } from '@mshanemc/plugin-helpers/dist/execProm';
 
 import { convertEmailToFilename, ShaneAIConfig } from '../../src/shared/ai/aiConstants';
-
-import fs = require('fs-extra');
 
 const testProjectName = 'testProjectEncryptedConfig';
 

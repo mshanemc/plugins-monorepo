@@ -2,12 +2,11 @@ import { flags, SfdxCommand } from '@salesforce/command';
 import chalk from 'chalk';
 import { unionBy } from 'lodash';
 
-import { getExisting } from '../../../shared/getExisting';
+import * as fs from 'fs-extra';
+import { getExisting } from '@mshanemc/plugin-helpers/dist/getExisting';
+import { setupArray } from '@mshanemc/plugin-helpers/dist/setupArray';
+import { writeJSONasXML } from '@mshanemc/plugin-helpers/dist/JSONXMLtools';
 import { thingsThatMigrate } from '../../../shared/permsetProfileMetadata';
-import { setupArray } from '../../../shared/setupArray';
-import { writeJSONasXML } from '../../../shared/JSONXMLtools';
-
-import fs = require('fs-extra');
 
 export default class PermSetConvert extends SfdxCommand {
     public static description = 'convert a profile into a permset';

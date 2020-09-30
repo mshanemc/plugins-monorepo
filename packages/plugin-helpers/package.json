@@ -5,8 +5,8 @@
     "author": "mshanemc <shane.mclaughlin@salesforce.com>",
     "homepage": "",
     "license": "ISC",
-    "main": "./dist/index.js",
-    "module": "./dist/index.js",
+    "main": "dist/index.js",
+    "module": "dist/index.js",
     "files": [
         "dist"
     ],

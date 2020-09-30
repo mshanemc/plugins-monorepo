@@ -1,7 +1,7 @@
 import { flags, SfdxCommand } from '@salesforce/command';
-import { singleRecordQuery } from '../../../shared/queries';
+import { FavoriteRequestBody } from '@mshanemc/plugin-helpers/dist/typeDefs';
+import { singleRecordQuery } from '@mshanemc/plugin-helpers/dist/queries';
 import { saveFavorite, favoriteFlagsName, favoriteFlagsStart, favoriteFlagsObject } from '../../../shared/uiApiFavorites';
-import { FavoriteRequestBody } from '../../../shared/typeDefs';
 
 export default class Favorite extends SfdxCommand {
     public static description = 'query records and set the match as a favorite';

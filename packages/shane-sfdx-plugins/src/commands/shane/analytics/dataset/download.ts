@@ -2,9 +2,9 @@ import { flags, SfdxCommand } from '@salesforce/command';
 import json2csv from 'json2csv';
 
 // import { Transform } from 'Json2csv';
-import { WaveDataSetListResponse, WaveDatasetVersion } from '../../../../shared/typeDefs';
 
-import fs = require('fs-extra');
+import * as fs from 'fs-extra';
+import { WaveDataSetListResponse, WaveDatasetVersion } from '@mshanemc/plugin-helpers/dist/typeDefs';
 import stream = require('stream');
 
 export default class DatasetDownload extends SfdxCommand {

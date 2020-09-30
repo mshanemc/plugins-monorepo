@@ -1,8 +1,8 @@
 import { flags, SfdxCommand } from '@salesforce/command';
 
-import { exec } from '../../../shared/execProm';
+import { exec } from '@mshanemc/plugin-helpers/dist/execProm';
 
-import fs = require('fs-extra');
+import * as fs from 'fs-extra';
 
 export default class Push extends SfdxCommand {
     public static description = 'convert and deploy the packaged source';

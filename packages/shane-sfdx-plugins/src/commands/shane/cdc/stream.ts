@@ -1,7 +1,7 @@
 import { flags, SfdxCommand } from '@salesforce/command';
 import { StreamingClient } from '@salesforce/core';
 import * as fs from 'fs-extra';
-import { CDCEvent } from '../../../shared/typeDefs';
+import { CDCEvent } from '@mshanemc/plugin-helpers/dist/typeDefs';
 import { replay, dir } from '../../../shared/flags';
 
 const writeJSONOptions = {

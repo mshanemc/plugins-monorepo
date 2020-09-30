@@ -1,9 +1,9 @@
 import { flags, SfdxCommand } from '@salesforce/command';
 import chalk from 'chalk';
 
-import { writeJSONasXML } from '../../../shared/JSONXMLtools';
+import { writeJSONasXML } from '@mshanemc/plugin-helpers/dist/JSONXMLtools';
 
-import fs = require('fs-extra');
+import * as fs from 'fs-extra';
 
 export default class LabelAdd extends SfdxCommand {
     public static description = 'create a ContentAsset from a local image file';

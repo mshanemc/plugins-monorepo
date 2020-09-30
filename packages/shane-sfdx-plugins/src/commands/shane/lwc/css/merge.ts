@@ -4,7 +4,7 @@ import * as stripCssComments from 'strip-css-comments';
 
 import { removeTrailingSlash } from '../../../../shared/flagParsing';
 
-import fs = require('fs-extra');
+import * as fs from 'fs-extra';
 
 export default class LWCCreate extends SfdxCommand {
     public static description = "take css from existing file(s), extract component-level relevant selectors and save to a LWC's css file";

@@ -2,7 +2,7 @@ import { flags, SfdxCommand } from '@salesforce/command';
 
 import chalk from 'chalk';
 
-import request = require('request-promise-native');
+import * as request from 'request-promise-native';
 import userIdLookup = require('../../../../shared/userIdLookup');
 
 export default class Set extends SfdxCommand {

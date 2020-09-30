@@ -9,7 +9,7 @@ import { herokuAppNameValidator } from '../../../../shared/flagParsing';
 
 import crypto = require('crypto');
 import aesjs = require('aes-js');
-import requestPromise = require('request-promise-native');
+import * as requestPromise from 'request-promise-native';
 
 const herokuAPIendpoint = 'https://api.heroku.com';
 

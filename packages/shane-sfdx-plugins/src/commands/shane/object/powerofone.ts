@@ -1,10 +1,10 @@
 import { flags, SfdxCommand } from '@salesforce/command';
 import chalk from 'chalk';
 
-import { writeJSONasXML } from '../../../shared/JSONXMLtools';
+import { writeJSONasXML } from '@mshanemc/plugin-helpers/dist/JSONXMLtools';
 import { removeTrailingSlash } from '../../../shared/flagParsing';
 
-import fs = require('fs-extra');
+import * as fs from 'fs-extra';
 
 export default class PowerOfOne extends SfdxCommand {
     public static description = 'add a "power of one" formula field to any object';

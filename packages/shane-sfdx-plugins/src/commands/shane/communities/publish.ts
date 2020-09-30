@@ -1,6 +1,6 @@
 /* tslint:disable:no-unused-expression */
 import { flags, SfdxCommand } from '@salesforce/command';
-import { CommunitiesRestResult } from '../../../shared/typeDefs';
+import { CommunitiesRestResult } from '@mshanemc/plugin-helpers/dist/typeDefs';
 
 export default class CommunityPublish extends SfdxCommand {
     public static description = 'Publish a community using a headless browser';

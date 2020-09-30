@@ -1,7 +1,7 @@
 import { flags, SfdxCommand } from '@salesforce/command';
 import { dump } from 'js-yaml';
 
-import fs = require('fs-extra');
+import * as fs from 'fs-extra';
 
 const getRandomInt = (min, max) => {
     const roundedMin = Math.ceil(min);

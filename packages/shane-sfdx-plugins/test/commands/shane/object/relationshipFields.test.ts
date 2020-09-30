@@ -1,9 +1,9 @@
 /* tslint:disable:no-unused-expression */
-import { exec } from '../../../../src/shared/execProm';
 
-import { FieldMeta } from '../../../../src/shared/typeDefs';
+import { FieldMeta } from '@mshanemc/plugin-helpers/dist/typeDefs';
 
-import fs = require('fs-extra');
+import * as fs from 'fs-extra';
+import { exec } from '@mshanemc/plugin-helpers/dist/execProm';
 import testutils = require('../../../helpers/testutils');
 
 const testProjectName = 'testProjectRelationshipFields';

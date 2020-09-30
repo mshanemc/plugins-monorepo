@@ -1,10 +1,9 @@
 import { flags, SfdxCommand } from '@salesforce/command';
 import chalk from 'chalk';
 
-import { writeJSONasXML } from '../../../shared/JSONXMLtools';
+import { writeJSONasXML } from '@mshanemc/plugin-helpers/dist/JSONXMLtools';
+import * as fs from 'fs-extra';
 import { removeTrailingSlash } from '../../../shared/flagParsing';
-
-import fs = require('fs-extra');
 
 export default class RemoteSite extends SfdxCommand {
     public static description = "create a remote site setting in the local source.  Push it when you're done";

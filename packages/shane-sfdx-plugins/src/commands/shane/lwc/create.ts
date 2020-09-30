@@ -3,7 +3,7 @@ import chalk from 'chalk';
 
 import { removeTrailingSlash } from '../../../shared/flagParsing';
 
-import fs = require('fs-extra');
+import * as fs from 'fs-extra';
 
 export default class LWCCreate extends SfdxCommand {
     public static description = 'create a lwc locally without need for sfdx project';

@@ -2,9 +2,9 @@
 import { flags, SfdxCommand } from '@salesforce/command';
 import * as puppeteer from 'puppeteer';
 
-import { exec2JSON } from '../../../shared/execProm';
+import { exec2JSON } from '@mshanemc/plugin-helpers/dist/execProm';
 
-import fs = require('fs-extra');
+import * as fs from 'fs-extra';
 
 export default class ConnectedAppAttributes extends SfdxCommand {
     public static description =

@@ -2,11 +2,10 @@ import { flags, SfdxCommand } from '@salesforce/command';
 import { sleep } from '@salesforce/kit';
 import chalk from 'chalk';
 
-import { exec2JSON } from '../../../../shared/execProm';
+import { exec2JSON } from '@mshanemc/plugin-helpers/dist/execProm';
 import { herokuAppNameValidator } from '../../../../shared/flagParsing';
 
-import request = require('request-promise-native');
-
+import * as request from 'request-promise-native';
 const pollingInterval = 2000; // ms polling when checking for app deployment
 const herokuAPIendpoint = 'https://api.heroku.com/app-setups';
 

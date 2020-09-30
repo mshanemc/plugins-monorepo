@@ -5,7 +5,7 @@ import { createReadStream, ReadStream } from 'fs-extra';
 import { AITokenRetrieve } from '../../../../shared/ai/aiConstants';
 import { datasetGet, datasetEndpoint, trainingEndpoint } from '../../../../shared/ai/datasetGet';
 
-import requestPromise = require('request-promise-native');
+import * as requestPromise from 'request-promise-native';
 
 const imageTypes = ['image', 'image-detection', 'image-multi-label'];
 const textTypes = ['text-intent', 'text-sentiment'];

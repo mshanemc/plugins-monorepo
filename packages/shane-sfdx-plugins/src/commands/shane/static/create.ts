@@ -1,9 +1,8 @@
 import { flags, SfdxCommand } from '@salesforce/command';
 
-import { writeJSONasXML } from '../../../shared/JSONXMLtools';
+import { writeJSONasXML } from '@mshanemc/plugin-helpers/dist/JSONXMLtools';
+import * as fs from 'fs-extra';
 import { removeTrailingSlash } from '../../../shared/flagParsing';
-
-import fs = require('fs-extra');
 
 export default class StaticCreate extends SfdxCommand {
     public static description = 'create a static resource locally';

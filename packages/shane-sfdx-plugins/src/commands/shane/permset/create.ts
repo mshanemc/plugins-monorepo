@@ -2,15 +2,13 @@ import { flags, SfdxCommand } from '@salesforce/command';
 import { Connection, SfdxError } from '@salesforce/core';
 import chalk from 'chalk';
 import { Field } from 'jsforce/describe-result';
+import * as fs from 'fs-extra';
+import { getParsed } from '@mshanemc/plugin-helpers/dist/xml2jsAsync';
+import { setupArray } from '@mshanemc/plugin-helpers/dist/setupArray';
+import { ToolingAPIDescribeQueryResult } from '@mshanemc/plugin-helpers/dist/typeDefs';
+import { getExisting } from '@mshanemc/plugin-helpers/dist/getExisting';
 
-import { getExisting } from '../../../shared/getExisting';
-import { setupArray } from '../../../shared/setupArray';
-import { getParsed } from '../../../shared/xml2jsAsync';
-
-import { ToolingAPIDescribeQueryResult } from '../../../shared/typeDefs';
-import { writeJSONasXML } from '../../../shared/JSONXMLtools';
-
-import fs = require('fs-extra');
+import { writeJSONasXML } from '@mshanemc/plugin-helpers/dist/JSONXMLtools';
 
 let conn: Connection;
 // tslint:disable-next-line: no-any

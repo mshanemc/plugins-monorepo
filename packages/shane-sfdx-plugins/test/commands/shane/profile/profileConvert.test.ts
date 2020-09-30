@@ -1,8 +1,8 @@
 /* tslint:disable:no-unused-expression */
-import { exec } from '../../../../src/shared/execProm';
-import { getExisting } from '../../../../src/shared/getExisting';
+import { exec } from '@mshanemc/plugin-helpers/dist/execProm';
+import { getExisting } from '@mshanemc/plugin-helpers/dist/getExisting';
 
-import fs = require('fs-extra');
+import * as fs from 'fs-extra';
 import testutils = require('../../../helpers/testutils');
 
 const profileName = 'Admin';

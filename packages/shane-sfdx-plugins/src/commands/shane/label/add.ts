@@ -1,12 +1,12 @@
 import { flags, SfdxCommand } from '@salesforce/command';
 import chalk from 'chalk';
 
-import { getExisting } from '../../../shared/getExisting';
-import { writeJSONasXML } from '../../../shared/JSONXMLtools';
-import { setupArray } from '../../../shared/setupArray';
-import { CustomLabel } from '../../../shared/typeDefs';
+import { getExisting } from '@mshanemc/plugin-helpers/dist/getExisting';
+import { writeJSONasXML } from '@mshanemc/plugin-helpers/dist/JSONXMLtools';
+import { setupArray } from '@mshanemc/plugin-helpers/dist/setupArray';
+import { CustomLabel } from '@mshanemc/plugin-helpers/dist/typeDefs';
 
-import fs = require('fs-extra');
+import * as fs from 'fs-extra';
 import sw = require('stopword');
 
 export default class LabelAdd extends SfdxCommand {

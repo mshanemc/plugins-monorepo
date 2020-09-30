@@ -1,9 +1,9 @@
 import { flags, SfdxCommand } from '@salesforce/command';
 import chalk from 'chalk';
 
-import { exec2JSON } from '../../../shared/execProm';
+import { exec2JSON } from '@mshanemc/plugin-helpers/dist/execProm';
 
-import request = require('request-promise-native');
+import * as request from 'request-promise-native';
 
 const usernameURL = 'https://unique-username-generator.herokuapp.com/unique';
 

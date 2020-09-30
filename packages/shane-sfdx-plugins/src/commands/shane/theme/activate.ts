@@ -1,8 +1,8 @@
 import { flags, SfdxCommand } from '@salesforce/command';
-import { exec2JSON } from '../../../shared/execProm';
-import { writeJSONasXML } from '../../../shared/JSONXMLtools';
+import { exec2JSON } from '@mshanemc/plugin-helpers/dist/execProm';
+import { writeJSONasXML } from '@mshanemc/plugin-helpers/dist/JSONXMLtools';
 
-import fs = require('fs-extra');
+import * as fs from 'fs-extra';
 
 export default class ThemeActivate extends SfdxCommand {
     public static description = 'Activate a LightningExperienceTheme via metadata api.  Makes no permanent changes to local source';

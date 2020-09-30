@@ -1,11 +1,9 @@
 import { flags, SfdxCommand } from '@salesforce/command';
 import { URL } from 'url';
-
-import { exec } from '../../../shared/execProm';
-import { QueryResult } from '../../../shared/typeDefs';
+import * as fs from 'fs-extra';
+import { exec } from '@mshanemc/plugin-helpers/dist/execProm';
+import { QueryResult } from '@mshanemc/plugin-helpers/dist/typeDefs';
 import { savePhotoForUserOrGroup } from '../../../shared/userPhoto';
-
-import fs = require('fs-extra');
 
 const tempRepo = 'tempRepo';
 const photoRepo = 'https://github.com/mshanemc/badProfilePhotos';

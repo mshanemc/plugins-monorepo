@@ -3,7 +3,7 @@ import { flags, SfdxCommand } from '@salesforce/command';
 import { convertEmailToFilename, ShaneAIConfig } from '../../../shared/ai/aiConstants';
 import { authJwt } from '../../../shared/ai/aiAuth';
 
-import fs = require('fs-extra');
+import * as fs from 'fs-extra';
 
 export default class EinsteinAIAuth extends SfdxCommand {
     public static description = 'get an access token from an email and a .pem file, either passed in or from environment variables';

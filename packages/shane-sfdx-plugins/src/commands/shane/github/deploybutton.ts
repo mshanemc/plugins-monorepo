@@ -1,7 +1,7 @@
 import { flags, SfdxCommand } from '@salesforce/command';
 import { URL } from 'url';
 
-import fs = require('fs-extra');
+import * as fs from 'fs-extra';
 
 const startText = '<!-- launchButton -->';
 const stopText = '<!-- launchButtonStop -->';

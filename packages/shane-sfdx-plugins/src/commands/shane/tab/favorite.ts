@@ -1,5 +1,5 @@
 import { flags, SfdxCommand } from '@salesforce/command';
-import { FavoriteRequestBody } from '../../../shared/typeDefs';
+import { FavoriteRequestBody } from '@mshanemc/plugin-helpers/dist/typeDefs';
 import { saveFavorite, favoriteFlagsName, favoriteFlagsStart } from '../../../shared/uiApiFavorites';
 
 export default class Favorite extends SfdxCommand {

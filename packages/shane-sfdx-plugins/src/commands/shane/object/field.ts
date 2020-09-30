@@ -1,12 +1,11 @@
 import { flags, SfdxCommand } from '@salesforce/command';
 import chalk from 'chalk';
 import cli from 'cli-ux';
+import * as fs from 'fs-extra';
 
-import { fixExistingDollarSign, writeJSONasXML } from '../../../shared/JSONXMLtools';
-import { getParsed } from '../../../shared/xml2jsAsync';
-import { FieldMeta } from '../../../shared/typeDefs';
-
-import fs = require('fs-extra');
+import { getParsed } from '@mshanemc/plugin-helpers/dist/xml2jsAsync';
+import { FieldMeta } from '@mshanemc/plugin-helpers/dist/typeDefs';
+import { fixExistingDollarSign, writeJSONasXML } from '@mshanemc/plugin-helpers/dist/JSONXMLtools';
 
 const SupportedTypesB = ['Text', 'Number', 'DateTime', 'Lookup', 'LongTextArea'];
 const SupportedTypesE = ['Text', 'Number', 'DateTime', 'Date', 'LongTextArea', 'Checkbox'];

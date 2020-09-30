@@ -1,11 +1,10 @@
 import { flags, SfdxCommand } from '@salesforce/command';
 import chalk from 'chalk';
 
-import { getExisting } from '../../../shared/getExisting';
-import { setupArray } from '../../../shared/setupArray';
-import { writeJSONasXML } from '../../../shared/JSONXMLtools';
-
-import fs = require('fs-extra');
+import { setupArray } from '@mshanemc/plugin-helpers/dist/setupArray';
+import * as fs from 'fs-extra';
+import { getExisting } from '@mshanemc/plugin-helpers/dist/getExisting';
+import { writeJSONasXML } from '@mshanemc/plugin-helpers/dist/JSONXMLtools';
 
 export default class UnPerm extends SfdxCommand {
     public static description = 'remove references to an object from profiles/permsets (all or a specific one)';

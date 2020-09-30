@@ -1,12 +1,12 @@
 import { flags, SfdxCommand } from '@salesforce/command';
 import chalk from 'chalk';
 
-import { getExisting } from '../../../../shared/getExisting';
-import { metadataTypes } from '../../../../shared/permsetProfileMetadata';
-import { setupArray } from '../../../../shared/setupArray';
-import { writeJSONasXML } from '../../../../shared/JSONXMLtools';
+import { getExisting } from '@mshanemc/plugin-helpers/dist/getExisting';
+import { writeJSONasXML } from '@mshanemc/plugin-helpers/dist/JSONXMLtools';
 
-import fs = require('fs-extra');
+import * as fs from 'fs-extra';
+import { setupArray } from '@mshanemc/plugin-helpers/dist/setupArray';
+import { metadataTypes } from '../../../../shared/permsetProfileMetadata';
 
 export default class PermAlign extends SfdxCommand {
     public static description = 'align profiles with ';

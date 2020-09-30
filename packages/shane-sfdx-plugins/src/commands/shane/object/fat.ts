@@ -1,10 +1,10 @@
 import { flags, SfdxCommand } from '@salesforce/command';
 import chalk from 'chalk';
 
-import { getExisting } from '../../../shared/getExisting';
-import { writeJSONasXML } from '../../../shared/JSONXMLtools';
+import { getExisting } from '@mshanemc/plugin-helpers/dist/getExisting';
+import { writeJSONasXML } from '@mshanemc/plugin-helpers/dist/JSONXMLtools';
 
-import fs = require('fs-extra');
+import * as fs from 'fs-extra';
 
 export default class FATUpdate extends SfdxCommand {
     public static description =

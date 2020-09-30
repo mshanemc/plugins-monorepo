@@ -1,8 +1,8 @@
 import { UX } from '@salesforce/command';
 import { Connection } from '@salesforce/core';
-import { ContentVersion, CreateResult } from '../typeDefs';
+import { ContentVersion, CreateResult } from '@mshanemc/plugin-helpers/dist/typeDefs';
 
-import localFile2CV = require('../localFile2CV');
+import localFile2CV = require('@mshanemc/plugin-helpers/dist/localFile2CV');
 
 const FILENAME = 'einstein_platform';
 

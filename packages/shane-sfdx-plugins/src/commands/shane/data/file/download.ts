@@ -1,7 +1,7 @@
 import { flags, SfdxCommand } from '@salesforce/command';
 import * as fs from 'fs-extra';
-import { singleRecordQuery } from '../../../../shared/queries';
-import { ContentVersion, ContentDocument } from '../../../../shared/typeDefs';
+import { ContentVersion, ContentDocument } from '@mshanemc/plugin-helpers/dist/typeDefs';
+import { singleRecordQuery } from '@mshanemc/plugin-helpers/dist/queries';
 
 export default class DataFileDownload extends SfdxCommand {
     public static description = 'save a file from the org to the local filesystem';

@@ -1,7 +1,6 @@
 import { flags, SfdxCommand } from '@salesforce/command';
 
-import request = require('request-promise-native');
-
+import * as request from 'request-promise-native';
 // import chalk from 'chalk';
 
 export default class AnalyticsAppShare extends SfdxCommand {

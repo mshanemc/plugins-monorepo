@@ -5,7 +5,7 @@ import { sleep } from '@salesforce/kit';
 import cli from 'cli-ux';
 import { createGzip } from 'zlib';
 
-import fs = require('fs-extra');
+import * as fs from 'fs-extra';
 
 const byteLimit = 10000000; // per the API docs https://developer.salesforce.com/docs/atlas.en-us.bi_dev_guide_ext_data.meta/bi_dev_guide_ext_data/bi_ext_data_object_externaldatapart.htm
 const pollTimeSeconds = 10;

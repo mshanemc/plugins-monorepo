@@ -3,9 +3,9 @@ import { AuthInfo } from '@salesforce/core';
 import * as assert from 'assert';
 import * as stripcolor from 'strip-color';
 
-import { exec } from '../../../shared/execProm';
+import { exec } from '@mshanemc/plugin-helpers/dist/execProm';
 
-import fs = require('fs-extra');
+import * as fs from 'fs-extra';
 
 const retrySeconds = 20;
 const maxTries = 120;

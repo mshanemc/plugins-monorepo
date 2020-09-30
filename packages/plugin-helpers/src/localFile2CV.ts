@@ -4,7 +4,7 @@ import { Connection } from '@salesforce/core';
 
 import { CreateResult, QueryResult, Record, ContentVersionCreateRequest, ContentVersion } from './typeDefs';
 
-import fs = require('fs-extra');
+import * as fs from 'fs-extra';
 
 export async function file2CV(conn: Connection, filepath: string, name?: string): Promise<Record> {
     const cvcr: ContentVersionCreateRequest = {

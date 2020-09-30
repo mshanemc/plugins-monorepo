@@ -1,6 +1,5 @@
-import { getParsed } from './xml2jsAsync';
-
-import fs = require('fs-extra');
+import * as fs from 'fs-extra';
+import { getParsed } from '@mshanemc/plugin-helpers/dist/xml2jsAsync';
 
 export async function getExisting(targetFilename: string, subType: string, defaults?: object) {
     // get or create permset

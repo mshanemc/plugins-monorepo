@@ -1,10 +1,9 @@
 import { flags, SfdxCommand } from '@salesforce/command';
 import chalk from 'chalk';
 
-import { writeJSONasXML } from '../../../shared/JSONXMLtools';
-import { getExisting } from '../../../shared/getExisting';
-
-import fs = require('fs-extra');
+import { writeJSONasXML } from '@mshanemc/plugin-helpers/dist/JSONXMLtools';
+import * as fs from 'fs-extra';
+import { getExisting } from '@mshanemc/plugin-helpers/dist/getExisting';
 
 export default class ConnectedAppUniquify extends SfdxCommand {
     public static description = 'modify a clientId/consumerKey on a local connected app to guaranatee uniqueness';

@@ -1,8 +1,7 @@
 import { flags, SfdxCommand } from '@salesforce/command';
 
-import { writeJSONasXML } from '../../../../shared/JSONXMLtools';
-
-import fs = require('fs-extra');
+import * as fs from 'fs-extra';
+import { writeJSONasXML } from '@mshanemc/plugin-helpers/dist/JSONXMLtools';
 
 export default class DomainCORS extends SfdxCommand {
     public static description = "whitelist the org's domain as a CORS";

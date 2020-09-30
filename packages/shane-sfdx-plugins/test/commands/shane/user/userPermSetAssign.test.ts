@@ -1,7 +1,7 @@
 import { exec, exec2JSON } from '../../../../src/shared/execProm';
 import * as options from '../../../../src/shared/js2xmlStandardOptions';
 
-import fs = require('fs-extra');
+import * as fs from 'fs-extra';
 import jsToXml = require('js2xmlparser');
 import testutils = require('../../../helpers/testutils');
 

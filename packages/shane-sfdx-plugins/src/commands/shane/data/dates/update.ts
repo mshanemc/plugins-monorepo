@@ -3,7 +3,7 @@
 import { flags, SfdxCommand } from '@salesforce/command';
 import * as moment from 'moment';
 
-import fs = require('fs-extra');
+import * as fs from 'fs-extra';
 import parse = require('csv-parse');
 
 export default class DateUpdate extends SfdxCommand {

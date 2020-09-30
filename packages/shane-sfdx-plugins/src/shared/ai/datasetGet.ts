@@ -1,7 +1,6 @@
 import { retry } from '@lifeomic/attempt';
+import * as requestPromise from 'request-promise-native';
 import { AITokenRetrieve, baseUrl } from './aiConstants';
-
-import requestPromise = require('request-promise-native');
 
 interface DatasetGetParams {
     dataset: string;

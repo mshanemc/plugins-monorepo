@@ -1,6 +1,6 @@
 import { flags, SfdxCommand } from '@salesforce/command';
 
-import { WaveDataFlowListResponse } from '../../../../shared/typeDefs';
+import { WaveDataFlowListResponse } from '@mshanemc/plugin-helpers/dist/typeDefs';
 
 export default class DataFlowStart extends SfdxCommand {
     public static description = 'start an analytics dataflow by name/label/id';

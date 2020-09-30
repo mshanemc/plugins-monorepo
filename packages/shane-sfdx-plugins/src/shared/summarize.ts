@@ -1,7 +1,7 @@
-import { execProm } from './execProm';
+import { execProm } from '@mshanemc/plugin-helpers/dist/execProm';
 
-import fs = require('fs-extra');
-import requestPromise = require('request-promise-native');
+import * as fs from 'fs-extra';
+import * as requestPromise from 'request-promise-native';
 
 const testReposSource = `https://raw.githubusercontent.com/mshanemc/deploy-to-sfdx/master/src/server/__tests__/helpers/testRepos.ts`;
 const tempDir = 'testProjectSummarize';
@@ -41,7 +41,7 @@ const poolsURL = `https://cdo-demo-main-159a7094ef6-15ab9e95e81.secure.force.com
     // clone all
     await Promise.all(uniqueRepoUrls.map((repo, index) => execProm(`git clone ${repo} ${tempDir}/repo${index}`)));
     const directories = await fs.readdir(tempDir);
-    const commands = [...new Set((await Promise.all(directories.map(dir => getCommandsFromFile(`${tempDir}/${dir}`)))).flat(Infinity))]
+    const commands = ([...new Set((await Promise.all(directories.map(dir => getCommandsFromFile(`${tempDir}/${dir}`)))).flat(Infinity))] as string[])
         .map(item => item.trim())
         .sort();
     // save in a json file

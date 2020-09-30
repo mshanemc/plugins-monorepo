@@ -2,7 +2,7 @@
 /* tslint:disable:no-unused-expression */
 import { exec, exec2JSON } from '../../../../src/shared/execProm';
 
-import fs = require('fs-extra');
+import * as fs from 'fs-extra';
 import testutils = require('../../../helpers/testutils');
 
 const testProjectName = 'mshanemc-custexp-1234567890';

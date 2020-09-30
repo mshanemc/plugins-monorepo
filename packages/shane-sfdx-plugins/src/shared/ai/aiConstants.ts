@@ -2,9 +2,9 @@ import { ConfigFile } from '@salesforce/core/lib/config/configFile';
 import { Crypto } from '@salesforce/core/lib/crypto';
 
 import * as moment from 'moment';
-import { AiAuthResponse } from '../typeDefs';
+import { AiAuthResponse } from '@mshanemc/plugin-helpers/dist/typeDefs';
 
-import requestPromise = require('request-promise-native');
+import * as requestPromise from 'request-promise-native';
 
 const baseUrl = 'https://api.einstein.ai/v2';
 const aiServiceName = 'shane-ai';

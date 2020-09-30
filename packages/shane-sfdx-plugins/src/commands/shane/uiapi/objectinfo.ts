@@ -1,7 +1,7 @@
 import { flags, SfdxCommand } from '@salesforce/command';
 
-import fs = require('fs-extra');
-import request = require('request-promise-native');
+import * as fs from 'fs-extra';
+import * as request from 'request-promise-native';
 
 export default class ObjectInfo extends SfdxCommand {
     public static description =

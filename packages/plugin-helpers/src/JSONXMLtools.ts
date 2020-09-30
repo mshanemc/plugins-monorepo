@@ -3,8 +3,8 @@ import { JsonMap } from '@salesforce/ts-types';
 import { IOptions } from 'js2xmlparser/lib/options';
 import { ObjectConfig, FieldMeta } from './typeDefs';
 
-import fs = require('fs-extra');
-import jsToXml = require('js2xmlparser');
+import * as fs from 'fs-extra';
+import * as jsToXml from 'js2xmlparser';
 
 const standardOptions: IOptions = {
     declaration: {

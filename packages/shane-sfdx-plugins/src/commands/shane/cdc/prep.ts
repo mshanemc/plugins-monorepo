@@ -1,10 +1,9 @@
 import { flags, SfdxCommand } from '@salesforce/command';
 // import { ux } from 'cli-ux';
 import * as fs from 'fs-extra';
-import { CDCEvent } from '../../../shared/typeDefs';
+import { CDCEvent } from '@mshanemc/plugin-helpers/dist/typeDefs';
 
-import request = require('request-promise-native');
-
+import * as request from 'request-promise-native';
 const describes = {};
 let conn;
 const writeJSONOptions = {

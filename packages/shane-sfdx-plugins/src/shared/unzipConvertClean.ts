@@ -1,8 +1,8 @@
 import { UX } from '@salesforce/command';
 
-import { exec } from './execProm';
+import { exec } from '@mshanemc/plugin-helpers/dist/execProm';
 
-import fs = require('fs-extra');
+import * as fs from 'fs-extra';
 import unzipper = require('unzipper');
 
 const retrieveUnzipConvertClean = async (tmpDir, retrieveCommand, target) => {

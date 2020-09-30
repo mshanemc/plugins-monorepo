@@ -1,9 +1,8 @@
 import { flags, SfdxCommand } from '@salesforce/command';
 import { retry } from '@lifeomic/attempt';
-import { exec } from '../../../shared/execProm';
-import { writeJSONasXML } from '../../../shared/JSONXMLtools';
-
-import fs = require('fs-extra');
+import { exec } from '@mshanemc/plugin-helpers/dist/execProm';
+import * as fs from 'fs-extra';
+import { writeJSONasXML } from '@mshanemc/plugin-helpers/dist/JSONXMLtools';
 
 const retryLimit = 5;
 

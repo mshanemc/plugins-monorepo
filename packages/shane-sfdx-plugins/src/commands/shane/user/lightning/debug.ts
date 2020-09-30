@@ -1,5 +1,5 @@
 import { flags, SfdxCommand } from '@salesforce/command';
-import { QueryResult } from '../../../../shared/typeDefs';
+import { QueryResult } from '@mshanemc/plugin-helpers/dist/typeDefs';
 
 import userIdLookup = require('../../../../shared/userIdLookup');
 

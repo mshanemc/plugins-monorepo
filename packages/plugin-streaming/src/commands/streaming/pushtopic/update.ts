@@ -1,6 +1,6 @@
 import { flags, SfdxCommand } from '@salesforce/command';
-import { singleRecordQuery } from '../../../../shared/queries';
-import { PushTopic } from '../../../../shared/typeDefs';
+import { singleRecordQuery } from '@mshanemc/plugin-helpers/dist/queries';
+import { PushTopic } from '@mshanemc/plugin-helpers/dist/typeDefs';
 
 export default class PushTopicUpsert extends SfdxCommand {
     public static description = 'Upsert push topics';

@@ -2,9 +2,8 @@
 import { Connection } from '@salesforce/core';
 
 import { flags } from '@salesforce/command';
-import { FavoriteRequestBody } from './typeDefs';
-
-import request = require('request-promise-native');
+import * as request from 'request-promise-native';
+import { FavoriteRequestBody } from '@mshanemc/plugin-helpers/dist/typeDefs';
 
 const saveFavorite = async ({ body, conn }: SaveFavoriteRequest) => {
     const uri = `${conn.instanceUrl}/services/data/v${await conn.retrieveMaxApiVersion()}/ui-api/favorites`;

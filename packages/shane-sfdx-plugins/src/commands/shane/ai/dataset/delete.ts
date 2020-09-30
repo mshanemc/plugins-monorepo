@@ -1,7 +1,6 @@
 import { flags, SfdxCommand } from '@salesforce/command';
+import * as requestPromise from 'request-promise-native';
 import { AITokenRetrieve, baseUrl } from '../../../../shared/ai/aiConstants';
-
-import requestPromise = require('request-promise-native');
 
 export default class EinsteinAIDelete extends SfdxCommand {
     public static description = 'delete a dataset';

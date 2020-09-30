@@ -2,8 +2,7 @@ import { flags, SfdxCommand } from '@salesforce/command';
 import { ux } from 'cli-ux';
 import * as fs from 'fs-extra';
 
-import request = require('request-promise-native');
-
+import * as request from 'request-promise-native';
 let conn;
 // const writeJSONOptions = {
 //   spaces: 2

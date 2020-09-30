@@ -8,11 +8,10 @@ import { retry } from '@lifeomic/attempt';
 import { checkHerokuEnvironmentVariables } from '../../../shared/herokuCheck';
 import { getMatchingApp, patchApp, defaultHerokuRequest } from '../../../shared/herokuConnectApi';
 
-import { exec2JSON } from '../../../shared/execProm';
+import { exec2JSON } from '@mshanemc/plugin-helpers/dist/execProm';
 import { herokuAppNameValidator } from '../../../shared/flagParsing';
 
-import request = require('request-promise-native');
-
+import * as request from 'request-promise-native';
 export default class HerokuConnect extends SfdxCommand {
     public static description = 'set up heroku connect on an existing app to an existing org (that you may have just created)';
 

@@ -1,8 +1,8 @@
 import { flags, SfdxCommand } from '@salesforce/command';
 
-import { exec, exec2JSON } from '../../../../shared/execProm';
+import { exec, exec2JSON } from '@mshanemc/plugin-helpers/dist/execProm';
 
-import fs = require('fs-extra');
+import * as fs from 'fs-extra';
 
 export default class GithubPackageInstall extends SfdxCommand {
     public static description = 'installs a package from github from mdapi src';

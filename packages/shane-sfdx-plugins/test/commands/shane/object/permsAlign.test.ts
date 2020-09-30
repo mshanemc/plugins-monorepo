@@ -1,9 +1,9 @@
 /* tslint:disable:no-unused-expression */
-import { exec } from '../../../../src/shared/execProm';
-import { getExisting } from '../../../../src/shared/getExisting';
-import { setupArray } from '../../../../src/shared/setupArray';
+import { exec } from '@mshanemc/plugin-helpers/dist/setupArray/execProm';
+import { getExisting } from '@mshanemc/plugin-helpers/dist/setupArray/getExisting';
+import { setupArray } from '@mshanemc/plugin-helpers/dist/setupArray/setupArray';
 
-import fs = require('fs-extra');
+import * as fs from 'fs-extra';
 import testutils = require('../../../helpers/testutils');
 
 const testProjectName = 'testProjectObjectProfileAlign';

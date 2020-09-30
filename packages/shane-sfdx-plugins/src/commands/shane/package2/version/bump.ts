@@ -2,9 +2,9 @@ import { flags, SfdxCommand } from '@salesforce/command';
 import chalk from 'chalk';
 import cli from 'cli-ux';
 
-import { exec, exec2JSON } from '../../../../shared/execProm';
+import { exec, exec2JSON } from '@mshanemc/plugin-helpers/dist/execProm';
 
-import fs = require('fs-extra');
+import * as fs from 'fs-extra';
 
 export default class Bump extends SfdxCommand {
     public static description = 'bump the major/minor version number in the packageDirectory';

@@ -1,5 +1,5 @@
 import { SfdxCommand } from '@salesforce/command';
-import { WaveDataSetListResponse } from '../../../../shared/typeDefs';
+import { WaveDataSetListResponse } from '@mshanemc/plugin-helpers/dist/typeDefs';
 
 export default class DatasetList extends SfdxCommand {
     public static description = 'what analytics datasets are in my org?';

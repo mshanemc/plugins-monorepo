@@ -1,8 +1,8 @@
 import { flags, SfdxCommand } from '@salesforce/command';
 
-import { exec2JSON } from '../../../../shared/execProm';
+import { exec2JSON } from '@mshanemc/plugin-helpers/dist/execProm';
 
-import request = require('request-promise-native');
+import * as request from 'request-promise-native';
 
 export default class GithubPackageInstall extends SfdxCommand {
     public static description = 'installs a package from github using the sfdx-project.json file (v43+) OR the latestVersion.json file convention';

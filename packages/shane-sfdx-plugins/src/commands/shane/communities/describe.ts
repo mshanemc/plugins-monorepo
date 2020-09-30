@@ -1,7 +1,6 @@
 import { flags, SfdxCommand } from '@salesforce/command';
+import * as fs from 'fs-extra';
 import { getExternalApps } from '../../../shared/community';
-
-import fs = require('fs-extra');
 
 export default class CommunityDescribe extends SfdxCommand {
     public static description = 'tell me about the communities in the org, and optionally store the description';

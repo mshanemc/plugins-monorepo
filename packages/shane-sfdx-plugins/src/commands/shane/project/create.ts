@@ -1,9 +1,9 @@
 import { flags, SfdxCommand } from '@salesforce/command';
 import chalk from 'chalk';
 
-import { exec, exec2String } from '../../../shared/execProm';
+import { exec2String, exec } from '@mshanemc/plugin-helpers/dist/execProm';
 
-import fs = require('fs-extra');
+import * as fs from 'fs-extra';
 
 export default class ProjectCreate extends SfdxCommand {
     public static description = 'creates an sfdx project';

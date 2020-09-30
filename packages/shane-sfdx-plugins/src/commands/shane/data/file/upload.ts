@@ -1,7 +1,7 @@
 import { flags, SfdxCommand } from '@salesforce/command';
-import { CreateResult, Record } from '../../../../shared/typeDefs';
+import { CreateResult, Record } from '@mshanemc/plugin-helpers/dist/typeDefs';
 
-import localFile2CV = require('../../../../shared/localFile2CV');
+import localFile2CV = require('@mshanemc/plugin-helpers/dist/localFile2CV');
 
 export default class Upload extends SfdxCommand {
     public static description = 'upload a file from local resources, optionally as a chatter post or attached file on a record';

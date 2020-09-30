@@ -1,5 +1,5 @@
 import { flags, SfdxCommand } from '@salesforce/command';
-import { QueryResult } from '../../../../shared/typeDefs';
+import { QueryResult } from '@mshanemc/plugin-helpers/dist/typeDefs';
 
 export default class ConcerigeChatEnable extends SfdxCommand {
     public static description = 'Modify custom settings to enable live agent chat for Concierge';

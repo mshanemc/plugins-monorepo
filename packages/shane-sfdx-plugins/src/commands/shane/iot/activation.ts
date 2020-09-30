@@ -2,7 +2,7 @@
 import { flags, SfdxCommand } from '@salesforce/command';
 import chalk from 'chalk';
 
-import request = require('request-promise-native');
+import * as request from 'request-promise-native';
 
 export default class Activation extends SfdxCommand {
     public static description = 'Activate an iot orchestration by name';
