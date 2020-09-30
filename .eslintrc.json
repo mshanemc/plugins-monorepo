@@ -1,7 +1,7 @@
 {
     "extends": ["oclif", "oclif-typescript", "airbnb-base", "airbnb-typescript/base", "prettier/@typescript-eslint", "prettier"],
     "parserOptions": {
-        "ecmaVersion": 2019
+        "ecmaVersion": 2020
     },
     "plugins": ["prettier"],
     "env": {
