@@ -1,23 +1,45 @@
 {
-  "name": "plugin-streaming",
-  "version": "1.0.0",
-  "description": "> TODO: description",
-  "author": "mshanemc <shane.mclaughlin@salesforce.com>",
-  "homepage": "",
-  "license": "ISC",
-  "main": "lib/plugin-streaming.js",
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
-  },
-  "files": [
-    "lib"
-  ],
-  "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
-  },
-  "dependencies": {
-    "@mshanemc/plugin-helpers": "^1.0.0",
-    "@salesforce/dev-config": "^2.0.0"
-  }
+    "name": "plugin-streaming",
+    "version": "1.0.0",
+    "description": "> TODO: description",
+    "author": "mshanemc <shane.mclaughlin@salesforce.com>",
+    "homepage": "",
+    "license": "ISC",
+    "main": "lib/plugin-streaming.js",
+    "directories": {
+        "lib": "lib",
+        "test": "__tests__"
+    },
+    "files": [
+        ".oclif.manifest.json",
+        "/lib",
+        "/messages"
+    ],
+    "oclif": {
+        "commands": "./lib/commands",
+        "bin": "sfdx",
+        "devPlugins": [
+            "@oclif/plugin-help"
+        ]
+    },
+    "scripts": {
+        "build": "rimraf lib && tsc",
+        "clean": "rimraf .oclif.manifest.json",
+        "test": "echo \"Error: run tests from root\" && exit 1"
+    },
+    "dependencies": {
+        "@mshanemc/plugin-helpers": "^1.0.0",
+        "@salesforce/dev-config": "^2.0.0"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.{ts,js,css,json,md}": [
+            "prettier --write",
+            "git add"
+        ]
+    }
 }
