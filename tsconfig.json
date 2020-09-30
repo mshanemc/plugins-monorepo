@@ -1,5 +1,4 @@
 {
-    "extends": "./node_modules/@salesforce/dev-config/tsconfig.json",
     "compilerOptions": {
         "allowJs": false,
         "lib": ["dom", "esNext", "ES2019.Array", "ES2019"],
