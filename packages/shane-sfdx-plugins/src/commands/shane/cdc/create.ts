@@ -3,6 +3,7 @@ import { ux } from 'cli-ux';
 import * as fs from 'fs-extra';
 
 import * as request from 'request-promise-native';
+
 let conn;
 // const writeJSONOptions = {
 //   spaces: 2
@@ -53,7 +54,7 @@ export default class CDCCreate extends SfdxCommand {
                 // create via jsforce
                 const createResults = await conn.sobject(objectType).create(currentBatch);
 
-                // create the idmap for this object
+                // create the idMap for this object
                 for (const [index, result] of createResults.entries()) {
                     if (result.success) {
                         idMap[originals[start + index].Id] = result.id;
@@ -74,7 +75,7 @@ const idCorrection = async (currentBatch, entityType, idMap) => {
                 if (idMap[record.fieldKey]) {
                     record[fieldKey] = idMap[record[fieldKey]];
                 } else {
-                    ux.warn(` omitting field ${fieldKey} because no id in idmap found for ${[record.fieldKey]}`);
+                    ux.warn(` omitting field ${fieldKey} because no id in idMap found for ${[record.fieldKey]}`);
                     delete record.fieldKey;
                 }
             }
