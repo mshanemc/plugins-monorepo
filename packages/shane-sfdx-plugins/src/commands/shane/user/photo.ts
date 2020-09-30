@@ -1,7 +1,7 @@
 import { flags, SfdxCommand } from '@salesforce/command';
 import { savePhotoForUserOrGroup } from '../../../shared/userPhoto';
 
-import userIdLookup = require('../../../shared/userIdLookup');
+import { getUserId } from '../../../shared/userIdLookup';
 
 export default class Photo extends SfdxCommand {
     public static description = 'Set the photo for a user by first/last name';
@@ -34,7 +34,7 @@ export default class Photo extends SfdxCommand {
         }
 
         const conn = this.org.getConnection();
-        const user = await userIdLookup.getUserId(conn, this.flags.lastname, this.flags.firstname);
+        const user = await getUserId(conn, this.flags.lastname, this.flags.firstname);
         this.ux.log(`found user with id ${user.Id}`);
 
         return savePhotoForUserOrGroup({

@@ -1,6 +1,7 @@
 import { UX } from '@salesforce/command';
 
 import * as request from 'request-promise-native';
+
 const hcDiscoveryServiceEndpoint = 'https://hc-central.heroku.com';
 
 const defaultHerokuRequest = {

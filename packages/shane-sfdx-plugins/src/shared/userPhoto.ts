@@ -1,7 +1,8 @@
 import { Connection } from '@salesforce/core';
-
-import localFile2CV = require('@mshanemc/plugin-helpers/dist/localFile2CV');
 import * as request from 'request-promise-native';
+
+import { file2CV } from '@mshanemc/plugin-helpers/dist/localFile2CV';
+
 const savePhotoForUserOrGroup = async ({ conn, userOrGroupId, filePath, isBanner, isGroup }: PhotoSaveInput) => {
     const options = {
         method: 'POST',
@@ -11,7 +12,7 @@ const savePhotoForUserOrGroup = async ({ conn, userOrGroupId, filePath, isBanner
         }
     };
     // save the CV
-    const photoCV = await localFile2CV.file2CV(conn, filePath);
+    const photoCV = await file2CV(conn, filePath);
 
     const savePhotResult = await request({
         ...options,

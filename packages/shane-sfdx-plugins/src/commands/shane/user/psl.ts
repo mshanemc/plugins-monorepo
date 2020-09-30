@@ -1,7 +1,7 @@
 import { flags, SfdxCommand } from '@salesforce/command';
 import { singleRecordQuery } from '@mshanemc/plugin-helpers/dist/queries';
 
-import userIdLookup = require('../../../shared/userIdLookup');
+import { getUserId } from '../../../shared/userIdLookup';
 
 export default class PSLAssign extends SfdxCommand {
     public static description = 'Assign a permset license already in an org for a user';
@@ -25,7 +25,7 @@ export default class PSLAssign extends SfdxCommand {
 
         const conn = this.org.getConnection();
         // const query = 'Select Name, TrialExpirationDate from Organization';
-        const user = await userIdLookup.getUserId(conn, this.flags.lastname, this.flags.firstname);
+        const user = await getUserId(conn, this.flags.lastname, this.flags.firstname);
         this.ux.log(`found user with id ${user.Id}`);
         const PSL = await singleRecordQuery({
             conn,

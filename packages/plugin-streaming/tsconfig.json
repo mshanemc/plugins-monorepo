@@ -3,6 +3,7 @@
     "compilerOptions": {
         "allowJs": false,
         "lib": ["dom", "esNext", "ES2019.Array"],
+        "moduleResolution": "node",
         "outDir": "./lib",
         "rootDirs": ["./src"],
         "baseUrl": "./",

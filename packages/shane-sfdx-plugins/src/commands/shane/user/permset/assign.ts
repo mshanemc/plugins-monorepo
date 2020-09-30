@@ -1,7 +1,7 @@
 import { flags, SfdxCommand } from '@salesforce/command';
 import { singleRecordQuery } from '@mshanemc/plugin-helpers/dist/queries';
 
-import userIdLookup = require('../../../../shared/userIdLookup');
+import { getUserId } from '../../../../shared/userIdLookup';
 
 export default class UserPermsetAssign extends SfdxCommand {
     public static description =
@@ -26,7 +26,7 @@ export default class UserPermsetAssign extends SfdxCommand {
         const conn = this.org.getConnection() as any;
 
         const user = this.flags.lastname
-            ? await userIdLookup.getUserId(conn, this.flags.lastname, this.flags.firstname)
+            ? await getUserId(conn, this.flags.lastname, this.flags.firstname)
             : await singleRecordQuery({ conn, query: `select id from User where username ='${(await conn.identity()).username}'` });
 
         this.ux.log(`found user with id ${user.Id}`);

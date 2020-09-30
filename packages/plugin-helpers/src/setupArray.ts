@@ -1,10 +1,13 @@
 import chalk from 'chalk';
+import { UX } from '@salesforce/command';
+
+const ux = await UX.create();
 
 const setupArray = (existing, arrayName: string) => {
     const updated = replacementBuilder(existing[arrayName]);
     if (!Array.isArray(updated)) {
-        this.ux.logJson(existing);
-        this.ux.error(chalk.red(`${arrayName} is not an array even after I tried to correct it`));
+        ux.logJson(existing);
+        ux.error(chalk.red(`${arrayName} is not an array even after I tried to correct it`));
     }
     return { ...existing, [arrayName]: updated };
 };
