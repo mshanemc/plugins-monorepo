@@ -5,7 +5,7 @@ import json2csv from 'json2csv';
 
 import * as fs from 'fs-extra';
 import { WaveDataSetListResponse, WaveDatasetVersion } from '@mshanemc/plugin-helpers/dist/typeDefs';
-import stream = require('stream');
+import * as stream from 'stream';
 
 export default class DatasetDownload extends SfdxCommand {
     public static description = 'download a dataset as csv';

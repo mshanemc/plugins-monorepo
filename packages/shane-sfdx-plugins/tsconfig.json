@@ -10,7 +10,8 @@
             "*": ["./node_modules/@salesforce/core/typings/*"]
         },
         "types": ["node", "jest", "fs-extra", "moment", "request", "request-promise-native", "js2xmlparser", "@types/jsforce/describe-result"],
-        "target": "ES2020"
+        "target": "ES2020",
+        "module": "es2020"
     },
     "include": ["./src/**/*", "test/unit/herokuCredentialParsing.test.ts"],
     "exclude": ["./test/**", "./testProject*/**/*", "./test/**/*", "./mshanemc-*/**/*"]

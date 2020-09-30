@@ -1,8 +1,8 @@
 import * as fs from 'fs-extra';
 import { AiAuthResponse } from '@mshanemc/plugin-helpers/dist/typeDefs';
 import * as requestPromise from 'request-promise-native';
+import * as jwt from 'jsonwebtoken';
 import { baseUrl } from './aiConstants';
-import jwt = require('jsonwebtoken');
 
 const endpoint = `${baseUrl}/oauth2/token`;
 

@@ -2,14 +2,13 @@ import { flags, SfdxCommand } from '@salesforce/command';
 import { retry } from '@lifeomic/attempt';
 import * as fs from 'fs-extra';
 
+import * as crypto from 'crypto';
+import * as aesjs from 'aes-js';
+import * as requestPromise from 'request-promise-native';
 import { PlaygroundSetup } from '../../../../shared/ai/aiPlaygroundSetup';
 import { authJwt } from '../../../../shared/ai/aiAuth';
 import { ShaneAIConfig, convertEmailToFilename } from '../../../../shared/ai/aiConstants';
 import { herokuAppNameValidator } from '../../../../shared/flagParsing';
-
-import crypto = require('crypto');
-import aesjs = require('aes-js');
-import * as requestPromise from 'request-promise-native';
 
 const herokuAPIendpoint = 'https://api.heroku.com';
 

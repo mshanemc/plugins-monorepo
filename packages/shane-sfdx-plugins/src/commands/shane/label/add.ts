@@ -7,7 +7,7 @@ import { setupArray } from '@mshanemc/plugin-helpers/dist/setupArray';
 import { CustomLabel } from '@mshanemc/plugin-helpers/dist/typeDefs';
 
 import * as fs from 'fs-extra';
-import sw = require('stopword');
+import * as sw from 'stopword';
 
 export default class LabelAdd extends SfdxCommand {
     public static description = "create a remote site setting in the local source.  Push it when you're done";

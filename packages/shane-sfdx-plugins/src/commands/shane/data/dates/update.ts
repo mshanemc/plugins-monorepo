@@ -4,7 +4,7 @@ import { flags, SfdxCommand } from '@salesforce/command';
 import * as moment from 'moment';
 
 import * as fs from 'fs-extra';
-import parse = require('csv-parse');
+import * as parse from 'csv-parse';
 
 export default class DateUpdate extends SfdxCommand {
     public static description = 'go through a folder of csv files and modify all the dates relative to a given date';

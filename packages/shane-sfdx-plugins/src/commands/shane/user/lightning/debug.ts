@@ -1,7 +1,7 @@
 import { flags, SfdxCommand } from '@salesforce/command';
 import { QueryResult } from '@mshanemc/plugin-helpers/dist/typeDefs';
 
-import userIdLookup = require('../../../../shared/userIdLookup');
+import { getUserId } from '../../../../shared/userIdLookup';
 
 export default class UserLightningDebug extends SfdxCommand {
     public static description = 'set the user to debug mode';
@@ -28,7 +28,7 @@ export default class UserLightningDebug extends SfdxCommand {
         let userId;
 
         if (this.flags.lastname && this.flags.firstname) {
-            const user = await userIdLookup.getUserId(conn, this.flags.lastname, this.flags.firstname);
+            const user = await getUserId(conn, this.flags.lastname, this.flags.firstname);
             userId = user.Id;
         } else {
             const users = (await conn.query(`select id from user where username = '${this.org.getUsername()}'`)) as QueryResult;

@@ -1,6 +1,6 @@
 import { flags, SfdxCommand } from '@salesforce/command';
 
-import ucc = require('../../../../shared/unzipConvertClean');
+import * as ucc from '../../../../shared/unzipConvertClean';
 
 const tmpDir = 'mdapiout';
 
