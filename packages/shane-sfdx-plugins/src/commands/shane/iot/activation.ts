@@ -7,6 +7,11 @@ import * as request from 'request-promise-native';
 export default class Activation extends SfdxCommand {
     public static description = 'Activate an iot orchestration by name';
 
+    protected static deprecated = {
+        version: 47,
+        message: `IoT orchestrations are no longer available.  Use a flow`
+    };
+
     public static examples = [
         `sfdx shane:iot:activate -n orchName -r
 // activates the orchestration, including the context if necessary, optionally resetting all the instances
